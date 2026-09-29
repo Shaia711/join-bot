@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const TOKEN = process.env.TOKEN;
+const TOKEN = process.env.BOT_TOKEN;
 const bot = new TelegramBot(TOKEN, { polling: true });
 console.log('Bot started successfully');
 bot.on('chat_join_request', async (req) => {
