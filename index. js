@@ -1,11 +1,13 @@
 const TelegramBot = require('node-telegram-bot-api');
-const TOKEN = ''8970260977:AAETUryhwZM1_yKFfOmAtUA4Tuqn1f5ohO4;
+const TOKEN = process.env.TOKEN;
 const bot = new TelegramBot(TOKEN, { polling: true });
+
 console.log('Bot started');
+
 bot.on('chat_join_request', async (req) => {
   try {
     await bot.approveChatJoinRequest(req.chat.id, req.from.id);
-    console.log(Approved ${req.from.first_name});
+    console.log(`Approved ${req.from.first_name}`);
   } catch (e) {
     console.log(e.message);
   }
