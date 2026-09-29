@@ -6,8 +6,7 @@ console.log('Bot started');
 
 bot.on('chat_join_request', async (req) => {
   try {
-    await bot.approveChatJoinRequest(req.chat.id, req.from.id);
-    console.log(`Approved ${req.from.first_name}`);
+    await bot.approveChatJoinRequest(req.chat.id, req.    console.log(`Approved ${req.from.first_name}`);
   } catch (e) {
     console.log(e.message);
   }
