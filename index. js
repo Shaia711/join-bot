@@ -12,3 +12,9 @@ bot.on('chat_join_request', async (req) => {
     console.log(e.message);
   }
 });
+
+
+
+
+
+.
